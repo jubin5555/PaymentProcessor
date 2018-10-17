@@ -7,7 +7,7 @@
 		revision="1.0-SNAPSHOT"
 		conf="scala-tool"
 		confs="compile, runtime, test, provided, optional, universal, universal-docs, universal-src, windows, docker, linux, rpm, debian, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool, docs"
-		date="20181016200518"/>
+		date="20181017104838"/>
 	<dependencies>
 		<module organisation="org.scala-lang" name="scala-compiler">
 			<revision name="2.12.6" status="release" pubdate="20180427044227" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, optional, optional(default), master" position="1">
@@ -15,7 +15,7 @@
 				<metadata-artifact status="no" details="" size="3080" time="0" location="C:\Users\jajubina\.ivy2\cache\org.scala-lang\scala-compiler\ivy-2.12.6.xml" searched="false" origin-is-local="false" origin-location="file:/C:/Users/jajubina/.sbt/preloaded/org.scala-lang/scala-compiler/2.12.6/ivys/ivy.xml"/>
 				<caller organisation="ncsu" name="ontologies$sources" conf="scala-tool" rev="2.12.6" rev-constraint-default="2.12.6" rev-constraint-dynamic="2.12.6" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
-					<artifact name="scala-compiler" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="1836089" time="4847" location="C:\Users\jajubina\.ivy2\cache\org.scala-lang\scala-compiler\srcs\scala-compiler-2.12.6-sources.jar">
+					<artifact name="scala-compiler" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="1836089" time="0" location="C:\Users\jajubina\.ivy2\cache\org.scala-lang\scala-compiler\srcs\scala-compiler-2.12.6-sources.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.12.6/scala-compiler-2.12.6-sources.jar"/>
 					</artifact>
 				</artifacts>
@@ -27,7 +27,7 @@
 				<metadata-artifact status="no" details="" size="5173" time="0" location="C:\Users\jajubina\.ivy2\cache\jline\jline\ivy-2.14.6.xml" searched="false" origin-is-local="false" origin-location="file:/C:/Users/jajubina/.sbt/preloaded/jline/jline/2.14.6/ivys/ivy.xml"/>
 				<caller organisation="ncsu" name="ontologies$sources" conf="scala-tool" rev="2.14.6" rev-constraint-default="2.14.6" rev-constraint-dynamic="2.14.6" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
-					<artifact name="jline" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="110450" time="4459" location="C:\Users\jajubina\.ivy2\cache\jline\jline\srcs\jline-2.14.6-sources.jar">
+					<artifact name="jline" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="110450" time="0" location="C:\Users\jajubina\.ivy2\cache\jline\jline\srcs\jline-2.14.6-sources.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/jline/jline/2.14.6/jline-2.14.6-sources.jar"/>
 					</artifact>
 				</artifacts>
@@ -51,7 +51,7 @@
 				<metadata-artifact status="no" details="" size="2814" time="0" location="C:\Users\jajubina\.ivy2\cache\org.scala-lang\scala-reflect\ivy-2.12.6.xml" searched="false" origin-is-local="false" origin-location="file:/C:/Users/jajubina/.sbt/preloaded/org.scala-lang/scala-reflect/2.12.6/ivys/ivy.xml"/>
 				<caller organisation="ncsu" name="ontologies$sources" conf="scala-tool" rev="2.12.6" rev-constraint-default="2.12.6" rev-constraint-dynamic="2.12.6" callerrev="1.0-SNAPSHOT" extra-info.apiURL="http://www.scala-lang.org/api/2.12.6/"/>
 				<artifacts>
-					<artifact name="scala-reflect" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="587933" time="4931" location="C:\Users\jajubina\.ivy2\cache\org.scala-lang\scala-reflect\srcs\scala-reflect-2.12.6-sources.jar">
+					<artifact name="scala-reflect" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="587933" time="0" location="C:\Users\jajubina\.ivy2\cache\org.scala-lang\scala-reflect\srcs\scala-reflect-2.12.6-sources.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.12.6/scala-reflect-2.12.6-sources.jar"/>
 					</artifact>
 				</artifacts>
@@ -63,7 +63,7 @@
 				<metadata-artifact status="no" details="" size="2642" time="0" location="C:\Users\jajubina\.ivy2\cache\org.scala-lang\scala-library\ivy-2.12.6.xml" searched="false" origin-is-local="false" origin-location="file:/C:/Users/jajubina/.sbt/preloaded/org.scala-lang/scala-library/2.12.6/ivys/ivy.xml"/>
 				<caller organisation="ncsu" name="ontologies$sources" conf="scala-tool" rev="2.12.6" rev-constraint-default="2.12.6" rev-constraint-dynamic="2.12.6" callerrev="1.0-SNAPSHOT" extra-info.apiURL="http://www.scala-lang.org/api/2.12.6/"/>
 				<artifacts>
-					<artifact name="scala-library" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="992293" time="4468" location="C:\Users\jajubina\.ivy2\cache\org.scala-lang\scala-library\srcs\scala-library-2.12.6-sources.jar">
+					<artifact name="scala-library" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="992293" time="0" location="C:\Users\jajubina\.ivy2\cache\org.scala-lang\scala-library\srcs\scala-library-2.12.6-sources.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.6/scala-library-2.12.6-sources.jar"/>
 					</artifact>
 				</artifacts>
