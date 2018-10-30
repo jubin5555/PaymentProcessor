@@ -4,7 +4,7 @@
 		module="ontologies_2.12"
 		revision="1.0-SNAPSHOT"
 		status="integration"
-		publication="20181017104802"
+		publication="20181028124848"
 	>
 		<description>
 		Ontologies
@@ -51,5 +51,9 @@
 		<dependency org="com.typesafe.play" name="play-akka-http-server_2.12" rev="2.6.19" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.play" name="play-guice_2.12" rev="2.6.19" conf="compile->default(compile)"/>
 		<dependency org="com.github.galigator.openllet" name="openllet-jena" rev="2.6.4" conf="compile->default(compile)"/>
+		<dependency org="com.fasterxml.jackson.core" name="jackson-core" rev="2.8.7" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play-json_2.12" rev="2.3.4" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play-java-jdbc_2.12" rev="2.6.19" conf="compile->default(compile)"/>
+		<dependency org="org.xerial" name="sqlite-jdbc" rev="3.23.1" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>

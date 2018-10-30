@@ -23,3 +23,6 @@ libraryDependencies += javaJdbc
 
 
 libraryDependencies += "org.xerial" % "sqlite-jdbc" % "3.23.1"
+
+libraryDependencies += "com.github.galigator.openllet" %
+  "openllet-jena" % "2.6.4"

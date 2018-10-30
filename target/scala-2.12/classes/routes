@@ -7,3 +7,21 @@ GET     /                           controllers.HomeController.index
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+
+POST    /addmerchant/:uniqueID      controllers.HomeController.addMerchant(uniqueID:String)
+
+POST    /addconsumer/:uniqueID      controllers.HomeController.addConsumer(uniqueID:String)
+
+POST    /addtransaction/:senderID/:receiverID/:transactionID    controllers.HomeController.addTransaction(senderID:String,receiverID:String,transactionID:String)
+
+GET     /iscommercial/:transactionID controllers.HomeController.isCommercial(transactionID:String)
+
+GET     /ispersonal/:transactionID  controllers.HomeController.isPersonal(transactionID:String)
+
+GET     /ispurchase/:transactionID controllers.HomeController.isPurchase(transactionID:String)
+
+GET     /isrefund/:transactionID    controllers.HomeController.isRefund(transactionID:String)
+
+GET     /istrusted/:merchantID  controllers.HomeController.isTrusted(merchantID:String)
+
+POST    /reset      controllers.HomeController.reset()

@@ -9,7 +9,7 @@
 		extra-sbtVersion="1.0"
 		conf="test"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool"
-		date="20181016195849"/>
+		date="20181028192722"/>
 	<dependencies>
 		<module organisation="org.foundweekends.giter8" name="sbt-giter8-scaffold">
 			<revision name="0.11.0" status="release" pubdate="20180713151356" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.foundweekends.org/giter8/" extra-scalaVersion="2.12" extra-sbtVersion="1.0" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="125">
@@ -604,12 +604,12 @@
 			</revision>
 		</module>
 		<module organisation="com.typesafe.play" name="sbt-plugin">
-			<revision name="2.6.19" status="release" pubdate="20180910171248" resolver="sbt-plugin-releases" artresolver="sbt-plugin-releases" homepage="https://playframework.com" extra-scalaVersion="2.12" extra-sbtVersion="1.0" extra-info.apiURL="https://www.playframework.com/documentation/2.6.19/api/scala/index.html" downloaded="true" searched="true" default="false" conf="compile, default(compile)" position="1">
+			<revision name="2.6.19" status="release" pubdate="20180910171248" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" extra-scalaVersion="2.12" extra-sbtVersion="1.0" extra-info.apiURL="https://www.playframework.com/documentation/2.6.19/api/scala/index.html" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="1">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="successful" details="" size="3582" time="958" location="C:\Users\jajubina\.ivy2\cache\scala_2.12\sbt_1.0\com.typesafe.play\sbt-plugin\ivy-2.6.19.xml" searched="true" original-local-location="C:\Users\jajubina\.ivy2\cache\scala_2.12\sbt_1.0\com.typesafe.play\sbt-plugin\ivy-2.6.19.xml.original" origin-is-local="false" origin-location="https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.play/sbt-plugin/scala_2.12/sbt_1.0/2.6.19/ivys/ivy.xml"/>
+				<metadata-artifact status="no" details="" size="3584" time="0" location="C:\Users\jajubina\.ivy2\cache\scala_2.12\sbt_1.0\com.typesafe.play\sbt-plugin\ivy-2.6.19.xml" searched="false" origin-is-local="false" origin-location="https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.play/sbt-plugin/scala_2.12/sbt_1.0/2.6.19/ivys/ivy.xml"/>
 				<caller organisation="default" name="ontologies-build" conf="test, compile, runtime" rev="2.6.19" rev-constraint-default="2.6.19" rev-constraint-dynamic="2.6.19" callerrev="0.1.0-SNAPSHOT" extra-scalaVersion="2.12" extra-sbtVersion="1.0"/>
 				<artifacts>
-					<artifact name="sbt-plugin" type="jar" ext="jar" status="successful" details="" size="219397" time="2823" location="C:\Users\jajubina\.ivy2\cache\scala_2.12\sbt_1.0\com.typesafe.play\sbt-plugin\jars\sbt-plugin-2.6.19.jar">
+					<artifact name="sbt-plugin" type="jar" ext="jar" status="no" details="" size="219397" time="0" location="C:\Users\jajubina\.ivy2\cache\scala_2.12\sbt_1.0\com.typesafe.play\sbt-plugin\jars\sbt-plugin-2.6.19.jar">
 						<origin-location is-local="false" location="https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.play/sbt-plugin/scala_2.12/sbt_1.0/2.6.19/jars/sbt-plugin.jar"/>
 					</artifact>
 				</artifacts>
@@ -2143,12 +2143,12 @@
 			</revision>
 		</module>
 		<module organisation="com.typesafe.play" name="run-support_2.12">
-			<revision name="2.6.19" status="release" pubdate="20180910125340" resolver="public" artresolver="public" homepage="https://playframework.com" extra-info.apiURL="https://www.playframework.com/documentation/2.6.19/api/scala/index.html" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="5">
+			<revision name="2.6.19" status="release" pubdate="20180910125340" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" extra-info.apiURL="https://www.playframework.com/documentation/2.6.19/api/scala/index.html" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="5">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="successful" details="" size="2846" time="190" location="C:\Users\jajubina\.ivy2\cache\com.typesafe.play\run-support_2.12\ivy-2.6.19.xml" searched="true" original-local-location="C:\Users\jajubina\.ivy2\cache\com.typesafe.play\run-support_2.12\ivy-2.6.19.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/run-support_2.12/2.6.19/run-support_2.12-2.6.19.pom"/>
+				<metadata-artifact status="no" details="" size="3713" time="0" location="C:\Users\jajubina\.ivy2\cache\com.typesafe.play\run-support_2.12\ivy-2.6.19.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/run-support_2.12/2.6.19/run-support_2.12-2.6.19.pom"/>
 				<caller organisation="com.typesafe.play" name="sbt-plugin" conf="compile" rev="2.6.19" rev-constraint-default="2.6.19" rev-constraint-dynamic="2.6.19" callerrev="2.6.19" extra-info.apiURL="https://www.playframework.com/documentation/2.6.19/api/scala/index.html"/>
 				<artifacts>
-					<artifact name="run-support_2.12" type="jar" ext="jar" status="successful" details="" size="72378" time="1353" location="C:\Users\jajubina\.ivy2\cache\com.typesafe.play\run-support_2.12\jars\run-support_2.12-2.6.19.jar">
+					<artifact name="run-support_2.12" type="jar" ext="jar" status="no" details="" size="72378" time="0" location="C:\Users\jajubina\.ivy2\cache\com.typesafe.play\run-support_2.12\jars\run-support_2.12-2.6.19.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/run-support_2.12/2.6.19/run-support_2.12-2.6.19.jar"/>
 					</artifact>
 				</artifacts>
@@ -2350,36 +2350,36 @@
 			</revision>
 		</module>
 		<module organisation="com.typesafe.play" name="build-link">
-			<revision name="2.6.19" status="release" pubdate="20180910141627" resolver="public" artresolver="public" homepage="https://playframework.com" extra-info.apiURL="https://www.playframework.com/documentation/2.6.19/api/scala/index.html" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="6">
+			<revision name="2.6.19" status="release" pubdate="20180910141627" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" extra-info.apiURL="https://www.playframework.com/documentation/2.6.19/api/scala/index.html" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="6">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="successful" details="" size="1641" time="187" location="C:\Users\jajubina\.ivy2\cache\com.typesafe.play\build-link\ivy-2.6.19.xml" searched="true" original-local-location="C:\Users\jajubina\.ivy2\cache\com.typesafe.play\build-link\ivy-2.6.19.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/build-link/2.6.19/build-link-2.6.19.pom"/>
+				<metadata-artifact status="no" details="" size="2903" time="0" location="C:\Users\jajubina\.ivy2\cache\com.typesafe.play\build-link\ivy-2.6.19.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/build-link/2.6.19/build-link-2.6.19.pom"/>
 				<caller organisation="com.typesafe.play" name="run-support_2.12" conf="default, compile, runtime, master" rev="2.6.19" rev-constraint-default="2.6.19" rev-constraint-dynamic="2.6.19" callerrev="2.6.19"/>
 				<artifacts>
-					<artifact name="build-link" type="jar" ext="jar" status="successful" details="" size="3412" time="1477" location="C:\Users\jajubina\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.6.19.jar">
+					<artifact name="build-link" type="jar" ext="jar" status="no" details="" size="3412" time="0" location="C:\Users\jajubina\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.6.19.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/build-link/2.6.19/build-link-2.6.19.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="com.typesafe.play" name="play-exceptions">
-			<revision name="2.6.19" status="release" pubdate="20180910141457" resolver="public" artresolver="public" homepage="https://playframework.com" extra-info.apiURL="https://www.playframework.com/documentation/2.6.19/api/scala/index.html" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="7">
+			<revision name="2.6.19" status="release" pubdate="20180910141457" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" extra-info.apiURL="https://www.playframework.com/documentation/2.6.19/api/scala/index.html" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="7">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="successful" details="" size="1434" time="154" location="C:\Users\jajubina\.ivy2\cache\com.typesafe.play\play-exceptions\ivy-2.6.19.xml" searched="true" original-local-location="C:\Users\jajubina\.ivy2\cache\com.typesafe.play\play-exceptions\ivy-2.6.19.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-exceptions/2.6.19/play-exceptions-2.6.19.pom"/>
+				<metadata-artifact status="no" details="" size="2730" time="0" location="C:\Users\jajubina\.ivy2\cache\com.typesafe.play\play-exceptions\ivy-2.6.19.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-exceptions/2.6.19/play-exceptions-2.6.19.pom"/>
 				<caller organisation="com.typesafe.play" name="build-link" conf="compile, runtime" rev="2.6.19" rev-constraint-default="2.6.19" rev-constraint-dynamic="2.6.19" callerrev="2.6.19"/>
 				<artifacts>
-					<artifact name="play-exceptions" type="jar" ext="jar" status="successful" details="" size="4790" time="1468" location="C:\Users\jajubina\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.6.19.jar">
+					<artifact name="play-exceptions" type="jar" ext="jar" status="no" details="" size="4790" time="0" location="C:\Users\jajubina\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.6.19.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-exceptions/2.6.19/play-exceptions-2.6.19.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="com.typesafe.play" name="sbt-routes-compiler_2.12">
-			<revision name="2.6.19" status="release" pubdate="20180910125142" resolver="public" artresolver="public" homepage="https://playframework.com" extra-info.apiURL="https://www.playframework.com/documentation/2.6.19/api/scala/index.html" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="2">
+			<revision name="2.6.19" status="release" pubdate="20180910125142" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" extra-info.apiURL="https://www.playframework.com/documentation/2.6.19/api/scala/index.html" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="2">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="successful" details="" size="3272" time="187" location="C:\Users\jajubina\.ivy2\cache\com.typesafe.play\sbt-routes-compiler_2.12\ivy-2.6.19.xml" searched="true" original-local-location="C:\Users\jajubina\.ivy2\cache\com.typesafe.play\sbt-routes-compiler_2.12\ivy-2.6.19.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/sbt-routes-compiler_2.12/2.6.19/sbt-routes-compiler_2.12-2.6.19.pom"/>
+				<metadata-artifact status="no" details="" size="4024" time="0" location="C:\Users\jajubina\.ivy2\cache\com.typesafe.play\sbt-routes-compiler_2.12\ivy-2.6.19.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/sbt-routes-compiler_2.12/2.6.19/sbt-routes-compiler_2.12-2.6.19.pom"/>
 				<caller organisation="com.typesafe.play" name="sbt-plugin" conf="compile" rev="2.6.19" rev-constraint-default="2.6.19" rev-constraint-dynamic="2.6.19" callerrev="2.6.19" extra-info.apiURL="https://www.playframework.com/documentation/2.6.19/api/scala/index.html"/>
 				<artifacts>
-					<artifact name="sbt-routes-compiler_2.12" type="jar" ext="jar" status="successful" details="" size="209474" time="1448" location="C:\Users\jajubina\.ivy2\cache\com.typesafe.play\sbt-routes-compiler_2.12\jars\sbt-routes-compiler_2.12-2.6.19.jar">
+					<artifact name="sbt-routes-compiler_2.12" type="jar" ext="jar" status="no" details="" size="209474" time="0" location="C:\Users\jajubina\.ivy2\cache\com.typesafe.play\sbt-routes-compiler_2.12\jars\sbt-routes-compiler_2.12-2.6.19.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/sbt-routes-compiler_2.12/2.6.19/sbt-routes-compiler_2.12-2.6.19.jar"/>
 					</artifact>
 				</artifacts>
@@ -2399,7 +2399,7 @@
 			</revision>
 		</module>
 		<module organisation="org.scala-sbt" name="global-plugins">
-			<revision name="0.0" status="integration" pubdate="20181016195849" resolver="inter-project" artresolver="inter-project" extra-scalaVersion="2.12" extra-sbtVersion="1.0" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="0">
+			<revision name="0.0" status="integration" pubdate="20181028192650" resolver="inter-project" artresolver="inter-project" extra-scalaVersion="2.12" extra-sbtVersion="1.0" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="0">
 				<metadata-artifact status="failed" details="" size="0" time="0" searched="false"/>
 				<caller organisation="default" name="ontologies-build" conf="test, compile, runtime" rev="0.0" rev-constraint-default="0.0" rev-constraint-dynamic="0.0" callerrev="0.1.0-SNAPSHOT" extra-scalaVersion="2.12" extra-sbtVersion="1.0"/>
 				<artifacts>

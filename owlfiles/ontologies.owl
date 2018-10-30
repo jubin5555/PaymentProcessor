@@ -1,0 +1,215 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/jajubina/ontologies/2018/9/socP3.owl#"
+     xml:base="http://www.semanticweb.org/jajubina/ontologies/2018/9/socP3.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/jajubina/ontologies/2018/9/socP3.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/jajubina/ontologies/2018/9/socP3.owl#hasReceiver -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jajubina/ontologies/2018/9/socP3.owl#hasReceiver">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jajubina/ontologies/2018/9/socP3.owl#Transaction"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jajubina/ontologies/2018/9/socP3.owl#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jajubina/ontologies/2018/9/socP3.owl#hasSender -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jajubina/ontologies/2018/9/socP3.owl#hasSender">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jajubina/ontologies/2018/9/socP3.owl#Transaction"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jajubina/ontologies/2018/9/socP3.owl#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jajubina/ontologies/2018/9/socP3.owl#participatesIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jajubina/ontologies/2018/9/socP3.owl#participatesIn">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jajubina/ontologies/2018/9/socP3.owl#Merchant"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jajubina/ontologies/2018/9/socP3.owl#Purchase"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/jajubina/ontologies/2018/9/socP3.owl#Consumer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jajubina/ontologies/2018/9/socP3.owl#Consumer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jajubina/ontologies/2018/9/socP3.owl#Person"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jajubina/ontologies/2018/9/socP3.owl#Merchant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jajubina/ontologies/2018/9/socP3.owl#Merchant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jajubina/ontologies/2018/9/socP3.owl#Merchant">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jajubina/ontologies/2018/9/socP3.owl#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jajubina/ontologies/2018/9/socP3.owl#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jajubina/ontologies/2018/9/socP3.owl#Person"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jajubina/ontologies/2018/9/socP3.owl#Purchase -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jajubina/ontologies/2018/9/socP3.owl#Purchase">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jajubina/ontologies/2018/9/socP3.owl#hasReceiver"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jajubina/ontologies/2018/9/socP3.owl#Merchant"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jajubina/ontologies/2018/9/socP3.owl#hasSender"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jajubina/ontologies/2018/9/socP3.owl#Consumer"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jajubina/ontologies/2018/9/socP3.owl#commercialTransaction"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jajubina/ontologies/2018/9/socP3.owl#Refund"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jajubina/ontologies/2018/9/socP3.owl#Refund -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jajubina/ontologies/2018/9/socP3.owl#Refund">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jajubina/ontologies/2018/9/socP3.owl#hasReceiver"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jajubina/ontologies/2018/9/socP3.owl#Consumer"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jajubina/ontologies/2018/9/socP3.owl#hasSender"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jajubina/ontologies/2018/9/socP3.owl#Merchant"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jajubina/ontologies/2018/9/socP3.owl#commercialTransaction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jajubina/ontologies/2018/9/socP3.owl#Transaction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jajubina/ontologies/2018/9/socP3.owl#Transaction">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jajubina/ontologies/2018/9/socP3.owl#hasReceiver"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/jajubina/ontologies/2018/9/socP3.owl#Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jajubina/ontologies/2018/9/socP3.owl#hasSender"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/jajubina/ontologies/2018/9/socP3.owl#Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jajubina/ontologies/2018/9/socP3.owl#Trusted -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jajubina/ontologies/2018/9/socP3.owl#Trusted">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jajubina/ontologies/2018/9/socP3.owl#participatesIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jajubina/ontologies/2018/9/socP3.owl#Purchase"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jajubina/ontologies/2018/9/socP3.owl#Merchant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jajubina/ontologies/2018/9/socP3.owl#commercialTransaction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jajubina/ontologies/2018/9/socP3.owl#commercialTransaction">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jajubina/ontologies/2018/9/socP3.owl#hasReceiver"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jajubina/ontologies/2018/9/socP3.owl#Merchant"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jajubina/ontologies/2018/9/socP3.owl#hasSender"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jajubina/ontologies/2018/9/socP3.owl#Merchant"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jajubina/ontologies/2018/9/socP3.owl#Transaction"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jajubina/ontologies/2018/9/socP3.owl#personalTransaction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jajubina/ontologies/2018/9/socP3.owl#personalTransaction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jajubina/ontologies/2018/9/socP3.owl#personalTransaction">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jajubina/ontologies/2018/9/socP3.owl#hasReceiver"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jajubina/ontologies/2018/9/socP3.owl#Consumer"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jajubina/ontologies/2018/9/socP3.owl#hasSender"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jajubina/ontologies/2018/9/socP3.owl#Consumer"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jajubina/ontologies/2018/9/socP3.owl#Transaction"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
