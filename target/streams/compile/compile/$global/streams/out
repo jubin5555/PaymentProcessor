@@ -1,5 +1,24 @@
-[0m[[0m[31merror[0m] [0m[0mC:\Users\jajubina\SOC Projects\ontologies\app\controllers\HomeController.java:29:1:  error: cannot find symbol[0m
-[0m[[0m[31merror[0m] [0m[0m        OntModel baseOntology = ModelFactory.createOntologyModel(OntModelSpec.OWL_DL_MEM);[0m
-[0m[[0m[31merror[0m] [0m[0m                                                                             ^  symbol:   variable OWL_DL_MEM[0m
-[0m[[0m[31merror[0m] [0m[0m  location: variable OntModelSpec of type Resource[0m
-[0m[[0m[31merror[0m] [0m[0m1 error[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\jajubina\SOC Projects\ontologies\app\plugins\Drools.java:3:1:  error: package org.drools.compiler.kie.builder.impl does not exist[0m
+[0m[[0m[31merror[0m] [0m[0mimport org.drools.compiler.kie.builder.impl.KieServicesImpl;[0m
+[0m[[0m[31merror[0m] [0m[0m                                           ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\jajubina\SOC Projects\ontologies\app\plugins\Drools.java:4:1:  error: package org.kie.api does not exist[0m
+[0m[[0m[31merror[0m] [0m[0mimport org.kie.api.KieServices;[0m
+[0m[[0m[31merror[0m] [0m[0m                  ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\jajubina\SOC Projects\ontologies\app\plugins\Drools.java:5:1:  error: package org.kie.api.event.rule does not exist[0m
+[0m[[0m[31merror[0m] [0m[0mimport org.kie.api.event.rule.DebugAgendaEventListener;[0m
+[0m[[0m[31merror[0m] [0m[0m                             ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\jajubina\SOC Projects\ontologies\app\plugins\Drools.java:7:1:  error: package org.kie.api.runtime does not exist[0m
+[0m[[0m[31merror[0m] [0m[0mimport org.kie.api.runtime.KieContainer;[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\jajubina\SOC Projects\ontologies\app\plugins\Drools.java:20:1:  error: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m    public final KieSession kieSession;[0m
+[0m[[0m[31merror[0m] [0m[0m                 ^  symbol:   class KieSession[0m
+[0m[[0m[31merror[0m] [0m[0m  location: class Drools[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\jajubina\SOC Projects\ontologies\app\plugins\Drools.java:24:1:  error: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m        KieServices kieServices = new KieServicesImpl();[0m
+[0m[[0m[31merror[0m] [0m[0m        ^  symbol:   class KieServices[0m
+[0m[[0m[31merror[0m] [0m[0m  location: class Drools[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\jajubina\SOC Projects\ontologies\app\plugins\Drools.java:24:1:  error: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m        KieServices kieServices = new KieServicesImpl();[0m
+[0m[[0m[31merror[0m] [0m[0m                                      ^  symbol:   class KieServicesImpl[0m
+[0m[[0m[31merror[0m] [0m[0m  location: class Drools[0m

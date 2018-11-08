@@ -1,8 +1,12 @@
-2018-10-28 23:06:03,672 [WARN] from application in play-dev-mode-akka.actor.default-dispatcher-7 - Configuration not found for database: No configuration setting found for key 'db'
-2018-10-28 23:06:06,672 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-7 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2018-11-08 16:44:07,095 [WARN] from application in play-dev-mode-akka.actor.default-dispatcher-9 - Configuration not found for database: No configuration setting found for key 'db'
+2018-11-08 16:44:09,369 [WARN] from org.drools.compiler.kie.builder.impl.ClasspathKieProject in play-dev-mode-akka.actor.default-dispatcher-9 - Unable to find pom.properties in /C:/Users/jajubina/SOC Projects/ontologies/target/scala-2.12/classes
+2018-11-08 16:44:09,370 [WARN] from org.drools.compiler.kie.builder.impl.ClasspathKieProject in play-dev-mode-akka.actor.default-dispatcher-9 - As folder project tried to fall back to pom.xml, but could not find one for null
+2018-11-08 16:44:09,370 [WARN] from org.drools.compiler.kie.builder.impl.ClasspathKieProject in play-dev-mode-akka.actor.default-dispatcher-9 - Unable to load pom.properties from/C:/Users/jajubina/SOC Projects/ontologies/target/scala-2.12/classes
+2018-11-08 16:44:09,370 [WARN] from org.drools.compiler.kie.builder.impl.ClasspathKieProject in play-dev-mode-akka.actor.default-dispatcher-9 - Cannot find maven pom properties for this project. Using the container's default ReleaseId
+2018-11-08 16:44:10,950 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-9 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
     play.filters.hosts.AllowedHostsFilter
 
-2018-10-28 23:06:06,756 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-7 - Application started (Dev)
+2018-11-08 16:44:11,037 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-9 - Application started (Dev)

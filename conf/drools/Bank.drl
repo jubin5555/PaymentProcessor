@@ -1,0 +1,76 @@
+package drools;
+
+
+//rule one is to check if the bank associated with the transaction is blacklisted
+rule "1" salience 6
+    when
+        t : Transactions( t.getBankStatus(t.getBankIDForTransaction())==true)
+
+    then
+        t.addTransactionDetailToRejectionLog(drools.getRule().getName(),t);
+        t.addRejectionReason(1);
+        t.addTransctionToRejectionSet();
+        drools.halt();
+end
+
+
+rule "2" salience 5
+    when
+          t : Transactions( t.getCategoryForTransaction().equals("Medical"))
+    then
+          t.addTransactionToOWL(t.getSenderIDForTransaction(),t.getReceiverIDForTransaction(),t.getTransactionID());
+          t.addTransactionDetailToAcceptanceLog(t);
+          drools.halt();
+end
+
+rule "3" salience 3
+    when
+        t : Transactions( t.getCategoryForTransaction().equals("Weapons") && (t.isTrusted(t.getReceiverIDForTransaction()))
+        && t.isTrusted(t.getSenderIDForTransaction()) && t.getBankLocality().equals("local"))
+    then
+        t.addTransactionToOWL(t.getSenderIDForTransaction(),t.getReceiverIDForTransaction(),t.getTransactionID());
+        t.addTransactionDetailToAcceptanceLog(t);
+        drools.halt();
+end
+
+rule "4" salience 4
+    when
+         t : Transactions( t.getAmountForTransaction()>=10000 &&(!(t.isTrusted(t.getReceiverIDForTransaction()))
+            || t.isTrusted(t.getSenderIDForTransaction()) ))
+    then
+        t.addRejectionReason(4);
+        t.addTransctionToRejectionSet();
+        t.addTransactionDetailToRejectionLog("4",t);
+        drools.halt();
+end
+
+rule "5" salience 4
+    when
+        t: Transactions(t.getBankAverage()!=0 && t.getAmountForTransaction() >10*t.getBankAverage() )
+    then
+        t.addTransctionToRejectionSet();
+        t.addRejectionReason(5);
+        t.addTransactionDetailToRejectionLog("5",t);
+        drools.halt();
+end
+
+rule "6" salience 4
+    when
+        t:Transactions(t.getBankAverage!=0 && (!(t.isTrusted(t.getReceiverIDForTransaction()))|| t.isTrusted(t.getSenderIDForTransaction()) )
+        && t.getBankTrustedAverage()<25)
+    then
+          t.addTransctionToRejectionSet();
+          t.addRejectionReason(6);
+          t.addTransactionDetailToRejectionLog("6",t);
+          drools.halt();
+end
+
+rule "7"  salience 7
+    when
+        t:Transactions(t.getLastThreeTransactiondetailForBank()==true)
+    then
+        t.setBankBlackListed(t.getBankIDForTransaction());
+end
+
+
+

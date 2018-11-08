@@ -1,0 +1,8 @@
+[0m[[0m[31merror[0m] [0m[0makka.stream.impl.io.ConnectionSourceStage$$anon$2$$anon$1: Bind failed because of java.net.BindException: Address already in use: bind[0m
+[0m[[0m[31merror[0m] [0m[0mCaused by: java.net.BindException: Address already in use: bind[0m
+[0m[[0m[31merror[0m] [0m[0m	at sun.nio.ch.Net.bind0(Native Method)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sun.nio.ch.Net.bind(Unknown Source)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sun.nio.ch.Net.bind(Unknown Source)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sun.nio.ch.ServerSocketChannelImpl.bind(Unknown Source)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sun.nio.ch.ServerSocketAdaptor.bind(Unknown Source)[0m
+[0m[[0m[31merror[0m] [0m[0m	at akka.io.TcpListener.liftedTree1$1(TcpListener.scala:56)[0m

@@ -2,8 +2,7 @@
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
 
-# An example controller showing a sample home page
-GET     /                           controllers.HomeController.index
+
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
@@ -25,3 +24,15 @@ GET     /isrefund/:transactionID    controllers.HomeController.isRefund(transact
 GET     /istrusted/:merchantID  controllers.HomeController.isTrusted(merchantID:String)
 
 POST    /reset      controllers.HomeController.reset()
+
+POST    /addbank/:nationality/:bankID controllers.HomeController.addBank(bankID:String,nationality:String)
+
+POST    /transactionrequest/:senderID/:receiverID/:bankID/:category/:amount/:transactionRequestID controllers.HomeController.addTransactionTwo(senderID:String,receiverID:String,bankID:String,category:String,amount:String,transactionRequestID  :String)
+
+GET     /isblacklisted/:bankID    controllers.HomeController.bankStatus(bankID:String)
+
+GET      /bankrejections/:bankID  controllers.HomeController.getBankRejectionCount(bankID:String)
+
+POST     /rejectionlog           controllers.HomeController.getRejectionLog()
+
+POST     /acceptancelog          controllers.HomeController.getAcceptanceLog()

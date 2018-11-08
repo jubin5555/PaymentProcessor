@@ -7,8 +7,133 @@
 		revision="1.0-SNAPSHOT"
 		conf="runtime-internal"
 		confs="compile, runtime, test, provided, optional, universal, universal-docs, universal-src, windows, docker, linux, rpm, debian, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool, docs"
-		date="20181028124848"/>
+		date="20181102203205"/>
 	<dependencies>
+		<module organisation="org.drools" name="drools-compiler">
+			<revision name="6.3.0.Final" status="release" pubdate="20150925090444" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="105">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="249493" time="0" location="C:\Users\jajubina\.ivy2\cache\org.drools\drools-compiler\ivy-6.3.0.Final.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/drools/drools-compiler/6.3.0.Final/drools-compiler-6.3.0.Final.pom"/>
+				<caller organisation="ncsu" name="ontologies_2.12" conf="compile, runtime-internal, runtime, optional" rev="6.3.0.Final" rev-constraint-default="6.3.0.Final" rev-constraint-dynamic="6.3.0.Final" callerrev="1.0-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="drools-compiler" type="bundle" ext="jar" status="no" details="" size="1667824" time="0" location="C:\Users\jajubina\.ivy2\cache\org.drools\drools-compiler\bundles\drools-compiler-6.3.0.Final.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/drools/drools-compiler/6.3.0.Final/drools-compiler-6.3.0.Final.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.eclipse.jdt.core.compiler" name="ecj">
+			<revision name="4.3.1" status="release" pubdate="20131228041631" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.eclipse.org/jdt/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="106">
+				<license name="Eclipse Public License v1.0" url="http://www.eclipse.org/org/documents/epl-v10.php"/>
+				<metadata-artifact status="no" details="" size="2736" time="0" location="C:\Users\jajubina\.ivy2\cache\org.eclipse.jdt.core.compiler\ecj\ivy-4.3.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/eclipse/jdt/core/compiler/ecj/4.3.1/ecj-4.3.1.pom"/>
+				<caller organisation="org.drools" name="drools-compiler" conf="default, compile, runtime, master" rev="4.3.1" rev-constraint-default="4.3.1" rev-constraint-dynamic="4.3.1" callerrev="6.3.0.Final"/>
+				<artifacts>
+					<artifact name="ecj" type="jar" ext="jar" status="no" details="" size="1830791" time="0" location="C:\Users\jajubina\.ivy2\cache\org.eclipse.jdt.core.compiler\ecj\jars\ecj-4.3.1.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/eclipse/jdt/core/compiler/ecj/4.3.1/ecj-4.3.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.drools" name="drools-core">
+			<revision name="6.3.0.Final" status="release" pubdate="20150925090746" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="101">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="248522" time="0" location="C:\Users\jajubina\.ivy2\cache\org.drools\drools-core\ivy-6.3.0.Final.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/drools/drools-core/6.3.0.Final/drools-core-6.3.0.Final.pom"/>
+				<caller organisation="ncsu" name="ontologies_2.12" conf="compile, runtime-internal, runtime, optional" rev="6.3.0.Final" rev-constraint-default="6.3.0.Final" rev-constraint-dynamic="6.3.0.Final" callerrev="1.0-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="drools-core" type="bundle" ext="jar" status="no" details="" size="3536826" time="0" location="C:\Users\jajubina\.ivy2\cache\org.drools\drools-core\bundles\drools-core-6.3.0.Final.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/drools/drools-core/6.3.0.Final/drools-core-6.3.0.Final.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.kie" name="kie-internal">
+			<revision name="6.3.0.Final" status="release" pubdate="20150925092354" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="104">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="246481" time="0" location="C:\Users\jajubina\.ivy2\cache\org.kie\kie-internal\ivy-6.3.0.Final.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/kie/kie-internal/6.3.0.Final/kie-internal-6.3.0.Final.pom"/>
+				<caller organisation="org.drools" name="drools-compiler" conf="default, compile, runtime, master" rev="6.3.0.Final" rev-constraint-default="6.3.0.Final" rev-constraint-dynamic="6.3.0.Final" callerrev="6.3.0.Final"/>
+				<caller organisation="org.drools" name="drools-core" conf="default, compile, runtime, master" rev="6.3.0.Final" rev-constraint-default="6.3.0.Final" rev-constraint-dynamic="6.3.0.Final" callerrev="6.3.0.Final"/>
+				<artifacts>
+					<artifact name="kie-internal" type="bundle" ext="jar" status="no" details="" size="276293" time="0" location="C:\Users\jajubina\.ivy2\cache\org.kie\kie-internal\bundles\kie-internal-6.3.0.Final.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/kie/kie-internal/6.3.0.Final/kie-internal-6.3.0.Final.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.kie" name="kie-api">
+			<revision name="6.3.0.Final" status="release" pubdate="20150925091202" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="103">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="246905" time="0" location="C:\Users\jajubina\.ivy2\cache\org.kie\kie-api\ivy-6.3.0.Final.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/kie/kie-api/6.3.0.Final/kie-api-6.3.0.Final.pom"/>
+				<caller organisation="org.kie" name="kie-internal" conf="compile, runtime" rev="6.3.0.Final" rev-constraint-default="6.3.0.Final" rev-constraint-dynamic="6.3.0.Final" callerrev="6.3.0.Final"/>
+				<caller organisation="org.drools" name="drools-compiler" conf="default, compile, runtime, master" rev="6.3.0.Final" rev-constraint-default="6.3.0.Final" rev-constraint-dynamic="6.3.0.Final" callerrev="6.3.0.Final"/>
+				<caller organisation="org.drools" name="drools-core" conf="default, compile, runtime, master" rev="6.3.0.Final" rev-constraint-default="6.3.0.Final" rev-constraint-dynamic="6.3.0.Final" callerrev="6.3.0.Final"/>
+				<artifacts>
+					<artifact name="kie-api" type="bundle" ext="jar" status="no" details="" size="154509" time="0" location="C:\Users\jajubina\.ivy2\cache\org.kie\kie-api\bundles\kie-api-6.3.0.Final.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/kie/kie-api/6.3.0.Final/kie-api-6.3.0.Final.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.mvel" name="mvel2">
+			<revision name="2.2.6.Final" status="release" pubdate="20150803094014" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://mvel.codehaus.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="102">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3471" time="0" location="C:\Users\jajubina\.ivy2\cache\org.mvel\mvel2\ivy-2.2.6.Final.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/mvel/mvel2/2.2.6.Final/mvel2-2.2.6.Final.pom"/>
+				<caller organisation="org.drools" name="drools-compiler" conf="default, compile, runtime, master" rev="2.2.6.Final" rev-constraint-default="2.2.6.Final" rev-constraint-dynamic="2.2.6.Final" callerrev="6.3.0.Final"/>
+				<caller organisation="org.drools" name="drools-core" conf="default, compile, runtime, master" rev="2.2.6.Final" rev-constraint-default="2.2.6.Final" rev-constraint-dynamic="2.2.6.Final" callerrev="6.3.0.Final"/>
+				<artifacts>
+					<artifact name="mvel2" type="jar" ext="jar" status="no" details="" size="1012264" time="0" location="C:\Users\jajubina\.ivy2\cache\org.mvel\mvel2\jars\mvel2-2.2.6.Final.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/mvel/mvel2/2.2.6.Final/mvel2-2.2.6.Final.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.thoughtworks.xstream" name="xstream">
+			<revision name="1.4.7" status="release" pubdate="20140208055119" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="107">
+				<license name="BSD style" url="http://xstream.codehaus.org/license.html"/>
+				<metadata-artifact status="no" details="" size="16667" time="0" location="C:\Users\jajubina\.ivy2\cache\com.thoughtworks.xstream\xstream\ivy-1.4.7.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/thoughtworks/xstream/xstream/1.4.7/xstream-1.4.7.pom"/>
+				<caller organisation="org.drools" name="drools-compiler" conf="default, compile, runtime, master" rev="1.4.7" rev-constraint-default="1.4.7" rev-constraint-dynamic="1.4.7" callerrev="6.3.0.Final"/>
+				<artifacts>
+					<artifact name="xstream" type="jar" ext="jar" status="no" details="" size="531571" time="0" location="C:\Users\jajubina\.ivy2\cache\com.thoughtworks.xstream\xstream\jars\xstream-1.4.7.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/thoughtworks/xstream/xstream/1.4.7/xstream-1.4.7.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="xpp3" name="xpp3_min">
+			<revision name="1.1.4c" status="release" pubdate="20071201040642" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.extreme.indiana.edu/xgws/xsoap/xpp/mxp1/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="109">
+				<license name="Indiana University Extreme! Lab Software License, vesion 1.1.1" url="http://www.extreme.indiana.edu/viewcvs/~checkout~/XPP3/java/LICENSE.txt"/>
+				<license name="Public Domain" url="http://creativecommons.org/licenses/publicdomain"/>
+				<metadata-artifact status="no" details="" size="2866" time="0" location="C:\Users\jajubina\.ivy2\cache\xpp3\xpp3_min\ivy-1.1.4c.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/xpp3/xpp3_min/1.1.4c/xpp3_min-1.1.4c.pom"/>
+				<caller organisation="com.thoughtworks.xstream" name="xstream" conf="compile, runtime" rev="1.1.4c" rev-constraint-default="1.1.4c" rev-constraint-dynamic="1.1.4c" callerrev="1.4.7"/>
+				<artifacts>
+					<artifact name="xpp3_min" type="jar" ext="jar" status="no" details="" size="24956" time="0" location="C:\Users\jajubina\.ivy2\cache\xpp3\xpp3_min\jars\xpp3_min-1.1.4c.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/xpp3/xpp3_min/1.1.4c/xpp3_min-1.1.4c.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="xmlpull" name="xmlpull">
+			<revision name="1.1.3.1" status="release" pubdate="20070319201831" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.xmlpull.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="108">
+				<license name="Public Domain" url="http://www.xmlpull.org/v1/download/unpacked/LICENSE.txt"/>
+				<metadata-artifact status="no" details="" size="2457" time="0" location="C:\Users\jajubina\.ivy2\cache\xmlpull\xmlpull\ivy-1.1.3.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/xmlpull/xmlpull/1.1.3.1/xmlpull-1.1.3.1.pom"/>
+				<caller organisation="com.thoughtworks.xstream" name="xstream" conf="compile, runtime" rev="1.1.3.1" rev-constraint-default="1.1.3.1" rev-constraint-dynamic="1.1.3.1" callerrev="1.4.7"/>
+				<artifacts>
+					<artifact name="xmlpull" type="jar" ext="jar" status="no" details="" size="7188" time="0" location="C:\Users\jajubina\.ivy2\cache\xmlpull\xmlpull\jars\xmlpull-1.1.3.1.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/xmlpull/xmlpull/1.1.3.1/xmlpull-1.1.3.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.google.protobuf" name="protobuf-java">
+			<revision name="2.5.0" status="release" pubdate="20130307191811" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://code.google.com/p/protobuf" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="110">
+				<license name="New BSD license" url="http://www.opensource.org/licenses/bsd-license.php"/>
+				<metadata-artifact status="no" details="" size="3175" time="0" location="C:\Users\jajubina\.ivy2\cache\com.google.protobuf\protobuf-java\ivy-2.5.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java/2.5.0/protobuf-java-2.5.0.pom"/>
+				<caller organisation="org.drools" name="drools-compiler" conf="default, compile, runtime, master" rev="2.5.0" rev-constraint-default="2.5.0" rev-constraint-dynamic="2.5.0" callerrev="6.3.0.Final"/>
+				<artifacts>
+					<artifact name="protobuf-java" type="bundle" ext="jar" status="no" details="" size="533455" time="0" location="C:\Users\jajubina\.ivy2\cache\com.google.protobuf\protobuf-java\bundles\protobuf-java-2.5.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java/2.5.0/protobuf-java-2.5.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
 		<module organisation="org.xerial" name="sqlite-jdbc">
 			<revision name="3.23.1" status="release" pubdate="20180525191053" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="100">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
@@ -22,24 +147,24 @@
 			</revision>
 		</module>
 		<module organisation="com.typesafe.play" name="play-java-jdbc_2.12">
-			<revision name="2.6.19" status="release" pubdate="20180910133431" resolver="public" artresolver="public" homepage="https://playframework.com" extra-info.apiURL="https://www.playframework.com/documentation/2.6.19/api/scala/index.html" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="93">
+			<revision name="2.6.19" status="release" pubdate="20180910133431" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" extra-info.apiURL="https://www.playframework.com/documentation/2.6.19/api/scala/index.html" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="93">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="successful" details="" size="2448" time="261" location="C:\Users\jajubina\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.12\ivy-2.6.19.xml" searched="true" original-local-location="C:\Users\jajubina\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.12\ivy-2.6.19.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-java-jdbc_2.12/2.6.19/play-java-jdbc_2.12-2.6.19.pom"/>
+				<metadata-artifact status="no" details="" size="3485" time="0" location="C:\Users\jajubina\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.12\ivy-2.6.19.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-java-jdbc_2.12/2.6.19/play-java-jdbc_2.12-2.6.19.pom"/>
 				<caller organisation="ncsu" name="ontologies_2.12" conf="compile, runtime-internal, runtime, optional" rev="2.6.19" rev-constraint-default="2.6.19" rev-constraint-dynamic="2.6.19" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
-					<artifact name="play-java-jdbc_2.12" type="jar" ext="jar" status="successful" details="" size="11741" time="2053" location="C:\Users\jajubina\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.12\jars\play-java-jdbc_2.12-2.6.19.jar">
+					<artifact name="play-java-jdbc_2.12" type="jar" ext="jar" status="no" details="" size="11741" time="0" location="C:\Users\jajubina\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.12\jars\play-java-jdbc_2.12-2.6.19.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-java-jdbc_2.12/2.6.19/play-java-jdbc_2.12-2.6.19.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="com.typesafe.play" name="play-jdbc_2.12">
-			<revision name="2.6.19" status="release" pubdate="20180910134021" resolver="public" artresolver="public" homepage="https://playframework.com" extra-info.apiURL="https://www.playframework.com/documentation/2.6.19/api/scala/index.html" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="94">
+			<revision name="2.6.19" status="release" pubdate="20180910134021" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" extra-info.apiURL="https://www.playframework.com/documentation/2.6.19/api/scala/index.html" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="94">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="successful" details="" size="3965" time="173" location="C:\Users\jajubina\.ivy2\cache\com.typesafe.play\play-jdbc_2.12\ivy-2.6.19.xml" searched="true" original-local-location="C:\Users\jajubina\.ivy2\cache\com.typesafe.play\play-jdbc_2.12\ivy-2.6.19.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-jdbc_2.12/2.6.19/play-jdbc_2.12-2.6.19.pom"/>
+				<metadata-artifact status="no" details="" size="4487" time="0" location="C:\Users\jajubina\.ivy2\cache\com.typesafe.play\play-jdbc_2.12\ivy-2.6.19.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-jdbc_2.12/2.6.19/play-jdbc_2.12-2.6.19.pom"/>
 				<caller organisation="com.typesafe.play" name="play-java-jdbc_2.12" conf="default, compile, runtime, master" rev="2.6.19" rev-constraint-default="2.6.19" rev-constraint-dynamic="2.6.19" callerrev="2.6.19"/>
 				<artifacts>
-					<artifact name="play-jdbc_2.12" type="jar" ext="jar" status="successful" details="" size="66581" time="1803" location="C:\Users\jajubina\.ivy2\cache\com.typesafe.play\play-jdbc_2.12\jars\play-jdbc_2.12-2.6.19.jar">
+					<artifact name="play-jdbc_2.12" type="jar" ext="jar" status="no" details="" size="66581" time="0" location="C:\Users\jajubina\.ivy2\cache\com.typesafe.play\play-jdbc_2.12\jars\play-jdbc_2.12-2.6.19.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-jdbc_2.12/2.6.19/play-jdbc_2.12-2.6.19.jar"/>
 					</artifact>
 				</artifacts>
@@ -93,12 +218,12 @@
 			</revision>
 		</module>
 		<module organisation="com.typesafe.play" name="play-jdbc-api_2.12">
-			<revision name="2.6.19" status="release" pubdate="20180910131029" resolver="public" artresolver="public" homepage="https://playframework.com" extra-info.apiURL="https://www.playframework.com/documentation/2.6.19/api/scala/index.html" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="95">
+			<revision name="2.6.19" status="release" pubdate="20180910131029" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" extra-info.apiURL="https://www.playframework.com/documentation/2.6.19/api/scala/index.html" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="95">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="successful" details="" size="1827" time="147" location="C:\Users\jajubina\.ivy2\cache\com.typesafe.play\play-jdbc-api_2.12\ivy-2.6.19.xml" searched="true" original-local-location="C:\Users\jajubina\.ivy2\cache\com.typesafe.play\play-jdbc-api_2.12\ivy-2.6.19.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-jdbc-api_2.12/2.6.19/play-jdbc-api_2.12-2.6.19.pom"/>
+				<metadata-artifact status="no" details="" size="3064" time="0" location="C:\Users\jajubina\.ivy2\cache\com.typesafe.play\play-jdbc-api_2.12\ivy-2.6.19.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-jdbc-api_2.12/2.6.19/play-jdbc-api_2.12-2.6.19.pom"/>
 				<caller organisation="com.typesafe.play" name="play-jdbc_2.12" conf="compile, runtime" rev="2.6.19" rev-constraint-default="2.6.19" rev-constraint-dynamic="2.6.19" callerrev="2.6.19"/>
 				<artifacts>
-					<artifact name="play-jdbc-api_2.12" type="jar" ext="jar" status="successful" details="" size="6589" time="1867" location="C:\Users\jajubina\.ivy2\cache\com.typesafe.play\play-jdbc-api_2.12\jars\play-jdbc-api_2.12-2.6.19.jar">
+					<artifact name="play-jdbc-api_2.12" type="jar" ext="jar" status="no" details="" size="6589" time="0" location="C:\Users\jajubina\.ivy2\cache\com.typesafe.play\play-jdbc-api_2.12\jars\play-jdbc-api_2.12-2.6.19.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-jdbc-api_2.12/2.6.19/play-jdbc-api_2.12-2.6.19.jar"/>
 					</artifact>
 				</artifacts>
@@ -406,6 +531,7 @@
 				<caller organisation="org.apache.httpcomponents" name="httpclient" conf="compile, runtime" rev="1.9" rev-constraint-default="1.9" rev-constraint-dynamic="1.9" callerrev="4.5.3"/>
 				<caller organisation="com.typesafe.play" name="play_2.12" conf="compile, runtime" rev="1.10" rev-constraint-default="1.10" rev-constraint-dynamic="1.10" callerrev="2.6.19"/>
 				<caller organisation="org.apache.jena" name="jena-core" conf="compile, runtime" rev="1.11" rev-constraint-default="1.11" rev-constraint-dynamic="1.11" callerrev="3.7.0"/>
+				<caller organisation="org.drools" name="drools-core" conf="default, compile, runtime, master" rev="1.4" rev-constraint-default="1.4" rev-constraint-dynamic="1.4" callerrev="6.3.0.Final"/>
 				<artifacts>
 					<artifact name="commons-codec" type="jar" ext="jar" status="no" details="" size="335042" time="0" location="C:\Users\jajubina\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.11.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/commons-codec/commons-codec/1.11/commons-codec-1.11.jar"/>
@@ -417,6 +543,12 @@
 				<metadata-artifact status="no" details="" size="10706" time="0" location="C:\Users\jajubina\.ivy2\cache\commons-codec\commons-codec\ivy-1.10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/commons-codec/commons-codec/1.10/commons-codec-1.10.pom"/>
 				<evicted-by rev="1.11"/>
 				<caller organisation="com.typesafe.play" name="play_2.12" conf="compile, runtime" rev="1.10" rev-constraint-default="1.10" rev-constraint-dynamic="1.10" callerrev="2.6.19"/>
+				<artifacts>
+				</artifacts>
+			</revision>
+			<revision name="1.4" evicted="latest-revision" evicted-reason="" downloaded="false" searched="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="-1">
+				<evicted-by rev="1.11"/>
+				<caller organisation="org.drools" name="drools-core" conf="default, compile, runtime, master" rev="1.4" rev-constraint-default="1.4" rev-constraint-dynamic="1.4" callerrev="6.3.0.Final"/>
 				<artifacts>
 				</artifacts>
 			</revision>
@@ -495,10 +627,17 @@
 				<metadata-artifact status="no" details="" size="5642" time="0" location="C:\Users\jajubina\.ivy2\cache\org.antlr\antlr-runtime\ivy-3.5.2.xml" searched="true" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/antlr/antlr-runtime/3.5.2/antlr-runtime-3.5.2.pom"/>
 				<caller organisation="com.github.galigator.openllet" name="openllet-jena" conf="default, compile, runtime, master" rev="[3.5.2,3.5.99]" rev-constraint-default="[3.5.2,3.5.99]" rev-constraint-dynamic="[3.5.2,3.5.99]" callerrev="2.6.4"/>
 				<caller organisation="com.github.galigator.openllet" name="openllet-query" conf="compile, runtime" rev="[3.5.2,3.5.99]" rev-constraint-default="[3.5.2,3.5.99]" rev-constraint-dynamic="[3.5.2,3.5.99]" callerrev="2.6.4"/>
+				<caller organisation="org.drools" name="drools-compiler" conf="default, compile, runtime, master" rev="3.5" rev-constraint-default="3.5" rev-constraint-dynamic="3.5" callerrev="6.3.0.Final"/>
 				<artifacts>
 					<artifact name="antlr-runtime" type="jar" ext="jar" status="no" details="" size="167761" time="0" location="C:\Users\jajubina\.ivy2\cache\org.antlr\antlr-runtime\jars\antlr-runtime-3.5.2.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/antlr/antlr-runtime/3.5.2/antlr-runtime-3.5.2.jar"/>
 					</artifact>
+				</artifacts>
+			</revision>
+			<revision name="3.5" evicted="latest-revision" evicted-reason="" downloaded="false" searched="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="-1">
+				<evicted-by rev="3.5.2"/>
+				<caller organisation="org.drools" name="drools-compiler" conf="default, compile, runtime, master" rev="3.5" rev-constraint-default="3.5" rev-constraint-dynamic="3.5" callerrev="6.3.0.Final"/>
+				<artifacts>
 				</artifacts>
 			</revision>
 		</module>
@@ -1381,6 +1520,7 @@
 			<revision name="1.7.25" status="release" pubdate="20170316123632" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.slf4j.org" downloaded="false" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="8">
 				<metadata-artifact status="no" details="" size="5279" time="0" location="C:\Users\jajubina\.ivy2\cache\org.slf4j\slf4j-api\ivy-1.7.25.xml" searched="true" origin-is-local="false" origin-location="file:/C:/Users/jajubina/.sbt/preloaded/org.slf4j/slf4j-api/1.7.25/ivys/ivy.xml"/>
 				<caller organisation="com.typesafe.play" name="play_2.12" conf="compile, runtime" rev="1.7.25" rev-constraint-default="1.7.25" rev-constraint-dynamic="1.7.25" callerrev="2.6.19"/>
+				<caller organisation="org.kie" name="kie-api" conf="compile, runtime" rev="1.7.2" rev-constraint-default="1.7.2" rev-constraint-dynamic="1.7.2" callerrev="6.3.0.Final"/>
 				<caller organisation="com.zaxxer" name="HikariCP" conf="compile, runtime" rev="1.7.25" rev-constraint-default="1.7.25" rev-constraint-dynamic="1.7.25" callerrev="2.7.9"/>
 				<caller organisation="org.apache.jena" name="jena-core" conf="compile, runtime" rev="1.7.25" rev-constraint-default="1.7.25" rev-constraint-dynamic="1.7.25" callerrev="3.7.0"/>
 				<caller organisation="com.typesafe.play" name="play-netty-utils" conf="compile, runtime" rev="1.7.25" rev-constraint-default="1.7.25" rev-constraint-dynamic="1.7.25" callerrev="2.6.19"/>
@@ -1392,7 +1532,10 @@
 				<caller organisation="org.apache.thrift" name="libthrift" conf="compile, runtime" rev="1.7.12" rev-constraint-default="1.7.12" rev-constraint-dynamic="1.7.12" callerrev="0.10.0"/>
 				<caller organisation="com.googlecode.usc" name="jdbcdslog" conf="compile, runtime" rev="1.5.10" rev-constraint-default="1.5.10" rev-constraint-dynamic="1.5.10" callerrev="1.0.6.2"/>
 				<caller organisation="com.typesafe.akka" name="akka-slf4j_2.12" conf="compile, runtime" rev="1.7.25" rev-constraint-default="1.7.25" rev-constraint-dynamic="1.7.25" callerrev="2.5.16"/>
+				<caller organisation="org.kie" name="kie-internal" conf="compile, runtime" rev="1.7.2" rev-constraint-default="1.7.2" rev-constraint-dynamic="1.7.2" callerrev="6.3.0.Final"/>
+				<caller organisation="org.drools" name="drools-compiler" conf="default, compile, runtime, master" rev="1.7.2" rev-constraint-default="1.7.2" rev-constraint-dynamic="1.7.2" callerrev="6.3.0.Final"/>
 				<caller organisation="org.slf4j" name="jul-to-slf4j" conf="compile, runtime" rev="1.7.25" rev-constraint-default="1.7.25" rev-constraint-dynamic="1.7.25" callerrev="1.7.25"/>
+				<caller organisation="org.drools" name="drools-core" conf="default, compile, runtime, master" rev="1.7.2" rev-constraint-default="1.7.2" rev-constraint-dynamic="1.7.2" callerrev="6.3.0.Final"/>
 				<caller organisation="org.apache.jena" name="jena-shaded-guava" conf="compile, runtime" rev="1.7.25" rev-constraint-default="1.7.25" rev-constraint-dynamic="1.7.25" callerrev="3.7.0"/>
 				<caller organisation="com.jolbox" name="bonecp" conf="compile, runtime" rev="1.7.2" rev-constraint-default="1.7.2" rev-constraint-dynamic="1.7.2" callerrev="0.8.0.RELEASE"/>
 				<caller organisation="org.apache.jena" name="jena-arq" conf="compile, runtime" rev="1.7.25" rev-constraint-default="1.7.25" rev-constraint-dynamic="1.7.25" callerrev="3.7.0"/>
@@ -1410,6 +1553,10 @@
 			</revision>
 			<revision name="1.7.2" evicted="latest-revision" evicted-reason="" downloaded="false" searched="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="-1">
 				<evicted-by rev="1.7.25"/>
+				<caller organisation="org.kie" name="kie-api" conf="compile, runtime" rev="1.7.2" rev-constraint-default="1.7.2" rev-constraint-dynamic="1.7.2" callerrev="6.3.0.Final"/>
+				<caller organisation="org.kie" name="kie-internal" conf="compile, runtime" rev="1.7.2" rev-constraint-default="1.7.2" rev-constraint-dynamic="1.7.2" callerrev="6.3.0.Final"/>
+				<caller organisation="org.drools" name="drools-compiler" conf="default, compile, runtime, master" rev="1.7.2" rev-constraint-default="1.7.2" rev-constraint-dynamic="1.7.2" callerrev="6.3.0.Final"/>
+				<caller organisation="org.drools" name="drools-core" conf="default, compile, runtime, master" rev="1.7.2" rev-constraint-default="1.7.2" rev-constraint-dynamic="1.7.2" callerrev="6.3.0.Final"/>
 				<caller organisation="com.jolbox" name="bonecp" conf="compile, runtime" rev="1.7.2" rev-constraint-default="1.7.2" rev-constraint-dynamic="1.7.2" callerrev="0.8.0.RELEASE"/>
 				<artifacts>
 				</artifacts>

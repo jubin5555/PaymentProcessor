@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/Users/jajubina/SOC Projects/ontologies/conf/routes
-// @DATE:Sun Oct 28 12:56:00 EDT 2018
+// @DATE:Tue Nov 06 22:33:29 EST 2018
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -8,10 +8,10 @@ import play.api.routing.JavaScriptReverseRoute
 import _root_.controllers.Assets.Asset
 import _root_.play.libs.F
 
-// @LINE:6
+// @LINE:8
 package controllers.javascript {
 
-  // @LINE:6
+  // @LINE:10
   class ReverseHomeController(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -19,7 +19,17 @@ package controllers.javascript {
     }
 
   
-    // @LINE:11
+    // @LINE:36
+    def getRejectionLog: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.getRejectionLog",
+      """
+        function() {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "rejectionlog"})
+        }
+      """
+    )
+  
+    // @LINE:10
     def addMerchant: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.addMerchant",
       """
@@ -29,7 +39,17 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:17
+    // @LINE:34
+    def getBankRejectionCount: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.getBankRejectionCount",
+      """
+        function(bankID0) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "bankrejections/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[String]].javascriptUnbind + """)("bankID", bankID0))})
+        }
+      """
+    )
+  
+    // @LINE:16
     def isCommercial: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.isCommercial",
       """
@@ -39,7 +59,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:19
+    // @LINE:18
     def isPersonal: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.isPersonal",
       """
@@ -49,7 +69,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:23
+    // @LINE:22
     def isRefund: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.isRefund",
       """
@@ -59,7 +79,17 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:15
+    // @LINE:30
+    def addTransactionTwo: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.addTransactionTwo",
+      """
+        function(senderID0,receiverID1,bankID2,category3,amount4,transactionRequestID5) {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "transactionrequest/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[String]].javascriptUnbind + """)("senderID", senderID0)) + "/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[String]].javascriptUnbind + """)("receiverID", receiverID1)) + "/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[String]].javascriptUnbind + """)("bankID", bankID2)) + "/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[String]].javascriptUnbind + """)("category", category3)) + "/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[String]].javascriptUnbind + """)("amount", amount4)) + "/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[String]].javascriptUnbind + """)("transactionRequestID", transactionRequestID5))})
+        }
+      """
+    )
+  
+    // @LINE:14
     def addTransaction: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.addTransaction",
       """
@@ -69,7 +99,17 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:21
+    // @LINE:28
+    def addBank: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.addBank",
+      """
+        function(bankID0,nationality1) {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "addbank/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[String]].javascriptUnbind + """)("nationality", nationality1)) + "/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[String]].javascriptUnbind + """)("bankID", bankID0))})
+        }
+      """
+    )
+  
+    // @LINE:20
     def isPurchase: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.isPurchase",
       """
@@ -79,7 +119,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:13
+    // @LINE:12
     def addConsumer: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.addConsumer",
       """
@@ -89,7 +129,27 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:25
+    // @LINE:32
+    def bankStatus: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.bankStatus",
+      """
+        function(bankID0) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "isblacklisted/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[String]].javascriptUnbind + """)("bankID", bankID0))})
+        }
+      """
+    )
+  
+    // @LINE:38
+    def getAcceptanceLog: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.getAcceptanceLog",
+      """
+        function() {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "acceptancelog"})
+        }
+      """
+    )
+  
+    // @LINE:24
     def isTrusted: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.isTrusted",
       """
@@ -99,7 +159,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:27
+    // @LINE:26
     def reset: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.reset",
       """
@@ -109,19 +169,9 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:6
-    def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.HomeController.index",
-      """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + """"})
-        }
-      """
-    )
-  
   }
 
-  // @LINE:9
+  // @LINE:8
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -129,7 +179,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:9
+    // @LINE:8
     def versioned: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.versioned",
       """

@@ -1,4 +1,9 @@
 [0m[[0m[0mdebug[0m] [0m[0mCopy resource mappings: [0m
 [0m[[0m[0mdebug[0m] [0m[0m	(C:\Users\jajubina\SOC Projects\ontologies\conf\application.conf,C:\Users\jajubina\SOC Projects\ontologies\target\scala-2.12\classes\application.conf)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(C:\Users\jajubina\SOC Projects\ontologies\conf\drools,C:\Users\jajubina\SOC Projects\ontologies\target\scala-2.12\classes\drools)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(C:\Users\jajubina\SOC Projects\ontologies\conf\drools\Bank.drl,C:\Users\jajubina\SOC Projects\ontologies\target\scala-2.12\classes\drools\Bank.drl)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(C:\Users\jajubina\SOC Projects\ontologies\conf\drools\HelloWorld.drl,C:\Users\jajubina\SOC Projects\ontologies\target\scala-2.12\classes\drools\HelloWorld.drl)[0m
 [0m[[0m[0mdebug[0m] [0m[0m	(C:\Users\jajubina\SOC Projects\ontologies\conf\logback.xml,C:\Users\jajubina\SOC Projects\ontologies\target\scala-2.12\classes\logback.xml)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(C:\Users\jajubina\SOC Projects\ontologies\conf\META-INF,C:\Users\jajubina\SOC Projects\ontologies\target\scala-2.12\classes\META-INF)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(C:\Users\jajubina\SOC Projects\ontologies\conf\META-INF\kmodule.xml,C:\Users\jajubina\SOC Projects\ontologies\target\scala-2.12\classes\META-INF\kmodule.xml)[0m
 [0m[[0m[0mdebug[0m] [0m[0m	(C:\Users\jajubina\SOC Projects\ontologies\conf\routes,C:\Users\jajubina\SOC Projects\ontologies\target\scala-2.12\classes\routes)[0m
