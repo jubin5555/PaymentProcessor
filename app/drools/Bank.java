@@ -2,9 +2,7 @@ package drools;
 
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 public class Bank {
     private String locality;
@@ -28,14 +26,17 @@ public class Bank {
     public int  getTotalAmount(){
         return this.totalAmount;
     }
-    public int getTrustedMerchantCount(){
+    public int getTrustedMerchantCount() {
         return this.trustedMerchantCount;
     }
-    public void setTrustedMerchantCount(){
+    public void setTrustedMerchantCount()
+    {
+        System.out.println("Inside setTrustedMerchantCOunt");
         this.trustedMerchantCount =this.trustedMerchantCount+1;
     }
     public void setTotalAmount(int currentAmount){
         this.totalAmount=this.totalAmount+currentAmount;
+        System.out.println("total AMount : "+ this.totalAmount);
     }
     public  String getStatus() {
         return this.locality;
@@ -85,7 +86,8 @@ public class Bank {
     }
     public int getBankTrustedPartnerAverage(){
         if(this.transactionCount!=0){
-            return ((this.trustedMerchantCount)/(this.transactionCount)) *100;
+            System.out.println("Inside getBankTrutedAvergae: "+ getTrustedMerchantCount());
+            return ((getTrustedMerchantCount()*100)/(this.rejectionSet.size())) ;
         }
         return 0;
     }

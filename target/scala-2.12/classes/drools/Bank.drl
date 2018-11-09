@@ -36,8 +36,8 @@ end
 
 rule "4" salience 4
     when
-         t : Transactions( t.getAmountForTransaction()>=10000 &&(!(t.isTrusted(t.getReceiverIDForTransaction()))
-            || t.isTrusted(t.getSenderIDForTransaction()) ))
+         t : Transactions( t.getAmountForTransaction()>=100000 && (!((t.isTrusted(t.getReceiverIDForTransaction())) ||
+          (t.isTrusted(t.getSenderIDForTransaction())))))
     then
         t.addRejectionReason(4);
         t.addTransctionToRejectionSet(Boolean.TRUE);
@@ -57,7 +57,7 @@ end
 
 rule "6" salience 4
     when
-        t:Transactions(t.getBankAverage>0 && ((!t.isTrusted(t.getReceiverIDForTransaction())) || (!t.isTrusted(t.getSenderIDForTransaction())) )
+        t:Transactions(t.getBankAverage>0 && (!((t.isTrusted(t.getReceiverIDForTransaction())) || (t.isTrusted(t.getSenderIDForTransaction())) ))
         && t.getBankTrustedAverage()<25)
     then
           t.addTransctionToRejectionSet(Boolean.TRUE);
@@ -70,9 +70,11 @@ rule "7"  salience 7
     when
         t:Transactions(t.getLastThreeTransactiondetailForBank()==Boolean.TRUE)
     then
+        t.addTransctionToRejectionSet(Boolean.TRUE);
         t.setBankBlackListed(t.getBankIDForTransaction());
         t.addRejectionReason(1);
         t.addTransactionDetailToRejectionLog("1",t);
+        drools.halt();
 end
 
 rule "8" salience 2

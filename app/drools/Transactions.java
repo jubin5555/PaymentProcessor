@@ -123,6 +123,7 @@ public class Transactions {
 
     public int getBankTrustedAverage(){
         Bank bank =bankMap.get(this.getBankIDForTransaction());
+        System.out.println("The trusted Average is: "+ bank.getBankTrustedPartnerAverage());
         return bank.getBankTrustedPartnerAverage();
     }
 

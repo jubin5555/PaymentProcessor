@@ -112,7 +112,7 @@ public class HomeController extends Controller {
         Boolean isTransaction = onto.isTransaction(Integer.parseInt(transactionID));
         if(isTransaction ==false)
         {
-            objectNode1.put("result","not a transaction");
+            objectNode1.put("result","not a valid ID");
             return ok(objectNode1);
         }
        Boolean isCommercial = onto.isCommercialService(Integer.parseInt(transactionID));
@@ -135,7 +135,7 @@ public class HomeController extends Controller {
 
         if(isTransaction ==false)
         {
-            objectNode1.put("result","not a transaction");
+            objectNode1.put("result","not a valid ID");
             return ok(objectNode1);
         }
         Boolean isPersonal = onto.isPersonalService(Integer.parseInt(transactionID));
@@ -180,7 +180,7 @@ public class HomeController extends Controller {
 
         if(isTransaction ==false)
         {
-            objectNode1.put("result","not a transaction");
+            objectNode1.put("result","not a valid ID");
             return ok(objectNode1);
         }
         Boolean isRefund = onto.isRefundService(Integer.parseInt(transactionID));
