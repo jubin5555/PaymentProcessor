@@ -113,7 +113,7 @@ public class OntologyService {
     public Boolean isTrustedService(int merchantID){
         OntClass trusted = ontReasoned.getOntClass(NS + "Trusted");
         Individual trusted1 =ontReasoned.getIndividual(NS+merchantID);
-
+        System.out.println("inside Trusted Service" + trusted1.hasOntClass(trusted));
         if (trusted1.hasOntClass(trusted)) {
             return true;
         }

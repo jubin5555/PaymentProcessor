@@ -16,7 +16,7 @@ public class Bank {
     private Integer trustedMerchantCount;
     private Integer checkBankTrustedAverage;
     private Integer bankAverageTransactions;
-    private Set<Integer> rejectionSet = new HashSet<>();
+    private List<Boolean> rejectionSet = new ArrayList<>();
 
     public Bank(){
         this.blacklisted=false;
@@ -46,17 +46,23 @@ public class Bank {
     public void setTransactionCount() {
      this.transactionCount=this.transactionCount+1;
     }
-    public void setBankRejectionCount() {
-        totalRejectionCount=totalRejectionCount+1;
-    }
+
     public int getBankRejectionCount() {
-        return  this.totalRejectionCount;
+        int count=0;
+        for(Boolean tempBool:this.rejectionSet)
+        {
+            if(tempBool.equals(Boolean.TRUE))
+            {
+                count++;
+            }
+        }
+        return count;
     }
     public void setStatus(String message) {
         this.locality=message;
     }
     public  Boolean getBlacklistStatus() {
-        return blacklisted;
+        return this.blacklisted;
     }
     public  void setBlacklist() {
         this.blacklisted=true;
@@ -67,12 +73,13 @@ public class Bank {
     public void setBankID(int bankID){
         this.ID =bankID;
     }
-    public void addRejectionToBank(int transactionID){
-        this.rejectionSet.add(transactionID);
+    public void addRejectionToBank(Boolean bool){
+        System.out.println("Inside Bank adding rejection" );
+        this.rejectionSet.add(bool);
     }
     public int getBankAverageTransactions(){
         if(this.transactionCount!=0){
-            return (this.totalAmount)/(transactionCount);
+            return (this.totalAmount)/(this.transactionCount);
         }
         return 0;
     }
@@ -84,24 +91,20 @@ public class Bank {
     }
     public boolean getLastThreeTransactionRejection()
     {
-
+        System.out.println("The rejection set is" + this.rejectionSet);
+        Boolean tempBool =Boolean.TRUE;
         if(this.rejectionSet.size() <3)
         {
-            return false;
+            return false ;
         }
         else {
-            int sum=0;
-            List<Integer > list =new ArrayList<>(rejectionSet);
-            for(int i=list.size()-4;i<=list.size()-1;i++)
+
+            for(int i=this.rejectionSet.size()-3;i<this.rejectionSet.size();i++)
             {
-                sum=sum+list.get(i);
-            }
-            int div =sum/3;
-            if(div==list.get(list.size()-2))
-            {
-                return true;
+                System.out.println("Inside list" +this.rejectionSet.get(i));
+                tempBool=tempBool && this.rejectionSet.get(i);
             }
         }
-        return false;
+        return tempBool;
     }
 }

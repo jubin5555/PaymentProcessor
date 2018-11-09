@@ -104,6 +104,7 @@ public class Transactions {
     public boolean isTrusted(int id)
     {
         OntologyService onto = new OntologyService();
+        System.out.println("Inside Onto" +onto.isTrustedService(id));
         return onto.isTrustedService(id);
     }
     public String getBankLocality( ){
@@ -116,6 +117,7 @@ public class Transactions {
     //false means has been rejected last three times.
     public boolean getLastThreeTransactiondetailForBank(){
         Bank bank =bankMap.get(this.getBankIDForTransaction());
+        System.out.println("Inside getLastThreeTransactionDetailForBank" + bank.getLastThreeTransactionRejection());
         return bank.getLastThreeTransactionRejection();
     }
 
@@ -127,11 +129,12 @@ public class Transactions {
     //0 means it is the first transaction
     public int getBankAverage(){
         Bank bank =bankMap.get(this.getBankIDForTransaction());
+        System.out.println("Inside bank total amount: "+ bank.getBankAverageTransactions());
         return bank.getBankAverageTransactions();
     }
 
-    public void addTransctionToRejectionSet(){
+    public void addTransctionToRejectionSet(Boolean tempBool){
         Bank bank = bankMap.get(this.getBankIDForTransaction());
-        bank.addRejectionToBank(this.transactionID);
+        bank.addRejectionToBank(tempBool);
     }
 }

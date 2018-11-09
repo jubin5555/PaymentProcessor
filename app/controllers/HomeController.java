@@ -7,6 +7,7 @@ import com.google.inject.Inject;
 import drools.Bank;
 import drools.Transactions;
 import org.apache.jena.ontology.*;
+import org.kie.api.runtime.rule.FactHandle;
 import play.mvc.*;
 import openllet.jena.PelletReasonerFactory;
 import org.apache.jena.rdf.model.ModelFactory;
@@ -14,19 +15,17 @@ import org.apache.jena.shared.JenaException;
 import org.apache.jena.util.FileManager;
 
 import java.io.InputStream;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
-import Logger.AcceptanceLogger;
 
 
 import plugins.Drools;
 
-;import static Logger.AcceptanceLogger.getFinalAcceptionLog;
+import static Logger.AcceptanceLogger.getFinalAcceptionLog;
 import static Logger.AcceptanceLogger.resetAcceptanceLogger;
 import static Logger.RejectionLogger.getFinalRejectionLog;
+import static Logger.RejectionLogger.resetRejectionLogger;
 
 /**
  * This controller contains an action to handle HTTP requests
@@ -42,6 +41,7 @@ public class HomeController extends Controller {
     public static Map<Integer,Bank> bankMap = new HashMap<>();
     @Inject
     Drools drools;
+
     public static String s;
 
 
@@ -112,7 +112,7 @@ public class HomeController extends Controller {
         Boolean isTransaction = onto.isTransaction(Integer.parseInt(transactionID));
         if(isTransaction ==false)
         {
-            objectNode1.put("result","error the id does not exist");
+            objectNode1.put("result","not a transaction");
             return ok(objectNode1);
         }
        Boolean isCommercial = onto.isCommercialService(Integer.parseInt(transactionID));
@@ -135,7 +135,7 @@ public class HomeController extends Controller {
 
         if(isTransaction ==false)
         {
-            objectNode1.put("result","error the id does not exist");
+            objectNode1.put("result","not a transaction");
             return ok(objectNode1);
         }
         Boolean isPersonal = onto.isPersonalService(Integer.parseInt(transactionID));
@@ -158,7 +158,7 @@ public class HomeController extends Controller {
 
         if(isTransaction ==false)
         {
-            objectNode1.put("result","error the id does not exist");
+            objectNode1.put("result","not a transaction");
             return ok(objectNode1);
         }
         Boolean isPurchase = onto.isPurchaseService(Integer.parseInt(transactionID));
@@ -180,7 +180,7 @@ public class HomeController extends Controller {
 
         if(isTransaction ==false)
         {
-            objectNode1.put("result","error the id does not exist");
+            objectNode1.put("result","not a transaction");
             return ok(objectNode1);
         }
         Boolean isRefund = onto.isRefundService(Integer.parseInt(transactionID));
@@ -203,7 +203,7 @@ public class HomeController extends Controller {
 
         //check if id is a valid
         if(onto.checkIDExists(Integer.parseInt(merchantID))==Boolean.FALSE){
-            objectNode1.put("result","error the id does not exist");
+            objectNode1.put("result","not a valid ID");
             return ok(objectNode1);
         }
 
@@ -233,7 +233,8 @@ public class HomeController extends Controller {
     public Result reset(){
         loadOntology();
         resetAcceptanceLogger();
-
+        resetRejectionLogger();
+        bankMap = new HashMap<>();
         ObjectMapper mapper = new ObjectMapper();
         ObjectNode objectNode1 = mapper.createObjectNode();
         objectNode1.put("result", "success");
@@ -266,8 +267,11 @@ public class HomeController extends Controller {
         transaction.setTransactionID(Integer.parseInt(transactionID));
         transaction.setTimeStampForTransaction();
         transaction.setBankLocality(bankMap.get(Integer.parseInt(bankID)).getStatus());
-        drools.kieSession.insert(transaction);
+
+        FactHandle handle = drools.kieSession.insert(transaction);
         drools.kieSession.fireAllRules();
+        drools.kieSession.delete(handle);
+
         OntologyService onto = new OntologyService();
         if(onto.isTransaction(Integer.parseInt(transactionID)).equals(Boolean.TRUE))
         {
@@ -281,6 +285,7 @@ public class HomeController extends Controller {
             }
             else
             {
+                transaction.addTransctionToRejectionSet(Boolean.TRUE);
                 transaction.addTransactionDetailToRejectionLog("3",transaction);
                 objectNode1.put("result","failure");
                 objectNode1.put("Rule failure number: ", "3");

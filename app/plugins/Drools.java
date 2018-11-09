@@ -19,6 +19,7 @@ public class Drools {
 
     public final KieSession kieSession;
 
+
     @Inject
     public Drools(ApplicationLifecycle lifecycle, Environment environment) {
         KieServices kieServices = new KieServicesImpl();
@@ -33,6 +34,7 @@ public class Drools {
             kieSession.destroy();
             return null;
         });
+
     }
 
 }
