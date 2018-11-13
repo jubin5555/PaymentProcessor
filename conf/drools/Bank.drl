@@ -9,7 +9,8 @@ rule "1" salience 6
         t.addTransactionDetailToRejectionLog(drools.getRule().getName(),t);
         t.addRejectionReason(1);
         t.addTransctionToRejectionSet(Boolean.TRUE);
-        drools.halt();
+        drools
+        .halt();
 end
 
 

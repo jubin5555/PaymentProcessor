@@ -31,12 +31,12 @@ public class Bank {
     }
     public void setTrustedMerchantCount()
     {
-        System.out.println("Inside setTrustedMerchantCOunt");
+        //System.out.println("Inside setTrustedMerchantCOunt");
         this.trustedMerchantCount =this.trustedMerchantCount+1;
     }
     public void setTotalAmount(int currentAmount){
         this.totalAmount=this.totalAmount+currentAmount;
-        System.out.println("total AMount : "+ this.totalAmount);
+        //System.out.println("total Amount : "+ this.totalAmount);
     }
     public  String getStatus() {
         return this.locality;
@@ -75,7 +75,7 @@ public class Bank {
         this.ID =bankID;
     }
     public void addRejectionToBank(Boolean bool){
-        System.out.println("Inside Bank adding rejection" );
+    //    System.out.println("Inside Bank adding rejection" );
         this.rejectionSet.add(bool);
     }
     public int getBankAverageTransactions(){
@@ -86,14 +86,14 @@ public class Bank {
     }
     public int getBankTrustedPartnerAverage(){
         if(this.transactionCount!=0){
-            System.out.println("Inside getBankTrutedAvergae: "+ getTrustedMerchantCount());
+      //      System.out.println("Inside getBankTrutedAvergae: "+ getTrustedMerchantCount());
             return ((getTrustedMerchantCount()*100)/(this.rejectionSet.size())) ;
         }
         return 0;
     }
     public boolean getLastThreeTransactionRejection()
     {
-        System.out.println("The rejection set is" + this.rejectionSet);
+       // System.out.println("The rejection set is" + this.rejectionSet);
         Boolean tempBool =Boolean.TRUE;
         if(this.rejectionSet.size() <3)
         {
@@ -103,7 +103,7 @@ public class Bank {
 
             for(int i=this.rejectionSet.size()-3;i<this.rejectionSet.size();i++)
             {
-                System.out.println("Inside list" +this.rejectionSet.get(i));
+          //      System.out.println("Inside list" +this.rejectionSet.get(i));
                 tempBool=tempBool && this.rejectionSet.get(i);
             }
         }

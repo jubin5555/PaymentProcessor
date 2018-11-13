@@ -300,7 +300,7 @@ public class HomeController extends Controller {
         ObjectMapper mapper = new ObjectMapper();
         ObjectNode objectNode1 = mapper.createObjectNode();
         objectNode1.put("result", "success");
-        System.out.println(bankMap);
+        //System.out.println(bankMap);
         if(!bankMap.containsKey(Integer.parseInt(bankID))){
             objectNode1.put("status","failure");
             objectNode1.put("reason","not a bank");
@@ -308,7 +308,7 @@ public class HomeController extends Controller {
         }
         Bank tempBank = bankMap.get(Integer.parseInt(bankID));
         Boolean tempBool = tempBank.getBlacklistStatus();
-        System.out.println(tempBool);
+        //System.out.println(tempBool);
         if(tempBool.equals(Boolean.TRUE))
         {
             objectNode1.put("status","success");
