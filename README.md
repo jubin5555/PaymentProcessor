@@ -183,8 +183,7 @@ transaction”
                               “reason”: “not a
                               bank”
                               }
-
-                            </b></th>
+</b></th>
    <th class="tg-yw4l"><b>Returns whether a bank isblacklisted.</b></th>
   </tr>
    <tr>
@@ -209,12 +208,12 @@ transaction”
   </tr>
    <tr>
     <th class="tg-yw4l"><b>GET /acceptancelog</b></th>
-    <th class="tg-yw4l"><b><acceptance log contents></b></th>
+    <th class="tg-yw4l"><b> acceptance log contents </b></th>
     <th class="tg-yw4l"><b>Refer to the logging section</b></th>
   </tr>
    <tr>
     <th class="tg-yw4l"><b>GET /rejectionlog</b></th>
-    <th class="tg-yw4l"><b><rejection log contents></b></th>
+    <th class="tg-yw4l"><b> rejection log contents </b></th>
     <th class="tg-yw4l"><b>Refer to the logging section</b></th>
   </tr>
 </table>
