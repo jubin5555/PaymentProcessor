@@ -199,7 +199,7 @@ transaction”
                   “status”: “failure”,
                   “reason”: “not a bank”
                   }
-  </b></th>
+                  </b></th>
     <th class="tg-yw4l"><b>Returns the number of rejections suffered by a bank.</b></th>
   </tr>
    <tr>
