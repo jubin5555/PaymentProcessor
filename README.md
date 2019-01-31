@@ -1,5 +1,5 @@
-# Ontology
-Transaction risk Assessment for payment processor (ex Paypal)  using Drools
+
+## Transaction risk Assessment for payment processor (ex Paypal)  using Drools
 
 # Transaction risk assessment
 A payment processor (ex. PayPal) faces several monetary and legal risks. A transaction may be
@@ -144,29 +144,78 @@ transaction”
     <th class="tg-yw4l"><b>Return whether a transaction is personal.</b></th>
   </tr>
    <tr>
-    <th class="tg-yw4l"><b>Animals</b></th>
-    <th class="tg-yw4l"><b>Sports</b></th>
-    <th class="tg-yw4l"><b>Fruits</b></th>
+    <th class="tg-yw4l"><b>GET /ispurchase/:transactionID</b></th>
+    <th class="tg-yw4l"><b> {
+                              “status”: “success”,
+                              “result”: “[true|false]”
+                             }
+                              or
+                             {
+                              “status”: “failure”,
+                              “reason”: “not a
+                               transaction”
+                              }</b></th>
+    <th class="tg-yw4l"><b>Return whether a transaction is a purchase transaction.</b></th>
   </tr>
    <tr>
-    <th class="tg-yw4l"><b>Animals</b></th>
-    <th class="tg-yw4l"><b>Sports</b></th>
-    <th class="tg-yw4l"><b>Fruits</b></th>
+    <th class="tg-yw4l"><b>GET /isrefund/:transactionID</b></th>
+    <th class="tg-yw4l"><b>{
+                              “status”: “success”,
+                              “result”: “[true|false]”
+                           }
+                           or
+                           {
+                              “status”: “failure”,
+                              “reason”: “not a
+                              transaction”
+                            }</b></th>
+    <th class="tg-yw4l"><b>Return whether a transaction is a refund transaction.</b></th>
   </tr>
    <tr>
-    <th class="tg-yw4l"><b>Animals</b></th>
-    <th class="tg-yw4l"><b>Sports</b></th>
-    <th class="tg-yw4l"><b>Fruits</b></th>
+    <th class="tg-yw4l"><b>GET /isblacklisted/:bankID</b></th>
+    <th class="tg-yw4l"><b>{
+                            “status”: “success”,
+                             “result”: “[true|false]”
+                            }
+                             or
+                             {
+                              “status”: “failure”,
+                              “reason”: “not a
+                              bank”
+                              }
+
+                            </b></th>
+   <th class="tg-yw4l"><b>Returns whether a bank isblacklisted.</b></th>
   </tr>
    <tr>
-    <th class="tg-yw4l"><b>Animals</b></th>
-    <th class="tg-yw4l"><b>Sports</b></th>
-    <th class="tg-yw4l"><b>Fruits</b></th>
+    <th class="tg-yw4l"><b>GET /bankrejections/:bankID </b></th>
+    <th class="tg-yw4l"><b>{
+                  “status”: “success”,
+                  “rejections”:
+                  “<number of rejections>”
+                  }
+                  or
+                  {
+                  “status”: “failure”,
+                  “reason”: “not a bank”
+                  }
+  </b></th>
+    <th class="tg-yw4l"><b>Returns the number of rejections suffered by a bank.</b></th>
   </tr>
    <tr>
-    <th class="tg-yw4l"><b>Animals</b></th>
-    <th class="tg-yw4l"><b>Sports</b></th>
-    <th class="tg-yw4l"><b>Fruits</b></th>
+    <th class="tg-yw4l"><b>POST /reset</b></th>
+    <th class="tg-yw4l"><b>{ “result”: “success” }</b></th>
+    <th class="tg-yw4l"><b>Reload and start afresh</b></th>
+  </tr>
+   <tr>
+    <th class="tg-yw4l"><b>GET /acceptancelog</b></th>
+    <th class="tg-yw4l"><b><acceptance log contents></b></th>
+    <th class="tg-yw4l"><b>Refer to the logging section</b></th>
+  </tr>
+   <tr>
+    <th class="tg-yw4l"><b>GET /rejectionlog</b></th>
+    <th class="tg-yw4l"><b><rejection log contents></b></th>
+    <th class="tg-yw4l"><b>Refer to the logging section</b></th>
   </tr>
 </table>
 
