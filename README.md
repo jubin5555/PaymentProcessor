@@ -73,20 +73,25 @@ following section.
 ## Rest API for the Project
 
 <table class="tg">
+   <tr>
+    <th class="tg-yw4l"><b> Request API </b></th>
+    <th class="tg-yw4l"><b> Respone </b></th>
+    <th class="tg-yw4l"><b> Description </b></th>
+  </tr>
   <tr>
-    <th class="tg-yw4l"><b>POST /addmerchant/:uniqueID</b></th>
+    <th class="tg-yw4l"><b> POST /addmerchant/:uniqueID </b></th>
     <th class="tg-yw4l"><b> { “status”: “success” } </b></th>
-    <th class="tg-yw4l"><b>Add an individual to Merchant class</b></th>
+    <th class="tg-yw4l"><b> Add an individual to Merchant class </b></th>
   </tr>
   <tr>
-    <td class="tg-yw4l">POST /addconsumer/:uniqueID</td>
-    <td class="tg-yw4l">{ “status”: “success” }</td>
-    <td class="tg-yw4l">Add an individual to Consumer class</td>
+    <td class="tg-yw4l"><b> POST /addconsumer/:uniqueID </b></td>
+    <td class="tg-yw4l"><b> { “status”: “success” } </b></td>
+    <td class="tg-yw4l"><b> Add an individual to Consumer class </b></td>
   </tr>
   <tr>
-    <td class="tg-yw4l">POST /addbank/:nationality/:bankID</td>
-    <td class="tg-yw4l">{ “status”: “success” } </td>
-    <td class="tg-yw4l">Nationality will be one of “local” or “international”, in lowercase. ID will be unique.</td>
+    <td class="tg-yw4l"><b> POST /addbank/:nationality/:bankID </b></td>
+    <td class="tg-yw4l"><b> { “status”: “success” } </b></td>
+    <td class="tg-yw4l"><b> Nationality will be one of “local” or “international”, in lowercase. ID will be unique. </b></td>
   </tr>
    <tr>
     <th class="tg-yw4l"><b>POST/transactionrequest/:senderID/
